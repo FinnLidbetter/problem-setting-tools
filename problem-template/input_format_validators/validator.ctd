@@ -1,0 +1,42 @@
+# https://github.com/DOMjudge/checktestdata
+# https://github.com/DOMjudge/checktestdata/blob/main/doc/format-spec.md
+#
+# Quick reference:
+#
+# integer  := 0|-?[1-9][0-9]*
+# float    := -?[0-9]+(\.[0-9]+)?([eE][+-]?[0-9]+)?
+# string   := ".*"
+# varname  := [a-z][a-z0-9]*
+# variable := <varname> | <varname> '[' <expr> [',' <expr> ...] ']'
+# value    := <integer> | <float> | <string> | <variable> | <function>
+# compare  := '<' | '>' | '<=' | '>=' | '==' | '!='
+# logical  := '&&' | '||'
+# expr     := <term> | <expr> [+-] <term>
+# term     := <factor> | <term> [*%/] <factor>
+# factor   := <value> | '-' <factor> | '(' <expr> ')' | <factor> '^' <factor>
+# test     := '!' <test> | <test> <logical> <test> | '(' <test> ')' | <expr> <compare> <expr> | <testcommand>
+#
+# Commands:
+#
+# MATCH(<value> str)
+# ISEOF
+# UNIQUE(<varname> a [,<varname> b ...])
+# INARRAY(<value> val, <varname> var)
+# STRLEN(<value> str)
+# SPACE / NEWLINE
+# EOF
+# INT(<expr> min, <expr> max [, <variable> name])
+# FLOAT(<expr> min, <expr> max [, <variable> name [, option]])
+# FLOATP(<expr> min, <expr> max, <value> mindecimals, <value> maxdecimals, [, <variable> name [, option]])
+# STRING(<value> str)
+# REGEX(<value> str [, <variable> name])
+# ASSERT(<test> condition)
+# SET(<variable> name '=' <expr> value[, ...])
+# UNSET(<varname> a [,<varname> b ...])
+# REP(<expr> count [,<command> separator]) [<command>...] END
+# REPI(<variable> i, <expr> count [,<command> separator]) [<command>...] END
+# WHILE(<test> condition [,<command> separator]) [<command>...] END
+# WHILEI(<variable> i, <test> condition [,<command> separator]) [<command>...] END
+# IF(<test> cond) [<command> cmds1...] [ELSE [<command> cmds2...]] END
+
+
