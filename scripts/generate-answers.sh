@@ -5,8 +5,10 @@
 
 INVOCATION="java Solution"
 
+set -x
+
 for in_file in *.in; 
 do
     [ -f "$in_file" ] || break
-    ${INVOCATION} < "${in_file}" > "${in_file%.in}.ans"
+    eval ${INVOCATION} < "${in_file}" > "${in_file%.in}.ans"
 done
