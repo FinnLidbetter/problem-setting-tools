@@ -16,13 +16,16 @@
 # factor   := <value> | '-' <factor> | '(' <expr> ')' | <factor> '^' <factor>
 # test     := '!' <test> | <test> <logical> <test> | '(' <test> ')' | <expr> <compare> <expr> | <testcommand>
 #
-# Commands:
-#
+# Test Commands:
 # MATCH(<value> str)
 # ISEOF
 # UNIQUE(<varname> a [,<varname> b ...])
 # INARRAY(<value> val, <varname> var)
+#
+# Functions:
 # STRLEN(<value> str)
+#
+# Commands:
 # SPACE / NEWLINE
 # EOF
 # INT(<expr> min, <expr> max [, <variable> name])
